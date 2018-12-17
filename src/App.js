@@ -1,25 +1,33 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 //games states
 import Rock from './game-components/rock.js';
 import Paper from './game-components/paper.js';
 import Sword from './game-components/sword.js';
 
-import './App.css';
+import './css/App.css';
 
 class App extends Component {
+  state = {
+    show: 0
+  };
+
+  // adding event handler to this
+  changeGameState = () => {
+    this.setState({ show: Math.floor(Math.random() * 3) + 1 });
+  }
+
   render() {
     return (
       <div className="App">
-        <Rock></Rock>
-        <Paper></Paper>
-        <Sword></Sword>
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
+          {this.state.show && this.state.show === 1 ? <Rock></Rock> : null}
+          {this.state.show && this.state.show === 2 ? <Paper></Paper> : null}
+          {this.state.show && this.state.show === 3 ? <Sword></Sword> : null}
+          <div className="buttonWrapper">
+            <button type="button" className="btn btn-primary btn-lg" onClick={this.changeGameState}>Play</button>
+          </div>
         </header>
       </div>
     );

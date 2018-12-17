@@ -18,8 +18,34 @@
   color: white;
 }
 
-.rock, .paper, .sword {
-  border: 2px solid #0D79FF;
+.rock,
+.paper,
+.sword {
+  background: none;
+  color: #0E30AD;
+
+  h1 {
+    font-weight: bold;
+    font-size: 5em;
+  }
+}
+
+.buttonWrapper {
+  margin: 5px;
+}
+
+.sword-svg {
+  animation-delay: 0.5s;
+}
+
+@keyframes kaboom {
+  90% {
+    transform: scale(1.0);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
 }
 
 .App-link {
@@ -30,6 +56,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
