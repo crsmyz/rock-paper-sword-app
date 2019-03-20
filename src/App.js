@@ -26,7 +26,7 @@ class App extends Component {
           {this.state.show && this.state.show === 2 ? <Paper></Paper> : null}
           {this.state.show && this.state.show === 3 ? <Sword></Sword> : null}
           <div className="buttonWrapper">
-            <button type="button" className="btn btn-primary btn-lg" onClick={this.changeGameState}>Play</button>
+            <button type="button" className="btn btn-primary btn-lg enlarge" onClick={this.changeGameState}>Play</button>
           </div>
         </header>
       </div>

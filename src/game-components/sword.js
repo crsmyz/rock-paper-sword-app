@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
-import sword from './../sword.svg';
+import sword from './../sword.png';
 
 // need a transistion between a circle spin from the left
 
 class Sword extends Component {
   render() {
     return (
-      <div className="sword">
-      <h1>SWORD</h1>
-      {/* <img src={sword} className="sword-img" alt="sword" /> */}
+      <div className="answer sword">
+      <img src={sword} className="sword-img" alt="SWORD" />
       </div>
     );
   }
